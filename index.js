@@ -17,6 +17,8 @@ app.use(bodyParser.json);
 
 routes(app);
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   res.send(`Node and express running on ${PORT}`);
 });
